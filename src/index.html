@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>
+    Engenious - Stratégie du SI
+  </title>
+  <meta name="description" content="Spécialiste en stratégie du SI à destination des TPE/PME et des start-ups" />
+  <meta name="keywords" content="informatique,architecture" />
+  <meta name="author" content="Nicolas GAUTIER" />
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
+  <style>
+    .brand_color {
+      color: rgb(1, 101, 250);
+    }
+
+    .brand_bg {
+      background: rgb(1, 101, 250);
+    }
+
+    .brand_secondarybg {
+      background: rgb(240, 124, 82)
+    }
+    .hover\:brand_color:hover {
+      color: rgb(1, 101, 250);
+    }
+
+    .hover\:brand_secondarycolor:hover {
+      color: rgb(240, 124, 82)
+    }
+
+    .brand_secondarycolor {
+      color: rgb(240, 124, 82)
+    }
+
+    .gradient {
+      background: rgb(1, 101, 250);
+    }
+  </style>
+</head>
+
+<body class="leading-normal tracking-normal text-white gradient" style="font-family: 'Source Sans Pro', sans-serif;">
+  <nav id="header" class="fixed w-full z-30 top-0 text-white bg-white shadow">
+    <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
+      <div class="pl-4 flex items-center">
+        <a class="toggleBrand text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl brand_color"
+          href="#intro">
+          <svg class="h-8 fill-current inline" version="1.1" viewBox="0 0 14.8 9.16" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(-10.7 -11.3)">
+              <g transform="matrix(.17 0 0 .17 -33.9 -9.8)" fill="#f07c52" shape-rendering="auto">
+                <path
+                  d="m336 173-0.988-2.33 0.634-0.922 2.53 0.0888 0.569-2.67-2.35-0.954-0.203-1.1 1.86-1.73-1.48-2.29-2.34 0.99-0.922-0.634 0.0886-2.54-2.66-0.57-0.954 2.36-1.1 0.204-1.73-1.86-2.29 1.48 0.988 2.33-0.634 0.922-2.53-0.0892-0.569 2.67 2.35 0.954 0.203 1.1-1.86 1.73 1.48 2.29 2.34-0.99 0.922 0.634-0.0887 2.54 2.66 0.57 0.954-2.36 1.1-0.204 1.73 1.86zm-3.78-3.32c-1.61 1.04-3.76 0.582-4.8-1.02-1.04-1.61-0.582-3.76 1.02-4.8 1.61-1.04 3.76-0.582 4.8 1.02 1.04 1.61 0.582 3.76-1.02 4.8"
+                  color="#000000" color-rendering="auto" dominant-baseline="auto" image-rendering="auto"
+                  solid-color="#000000" stop-color="#000000"
+                  style="font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;inline-size:0;isolation:auto;mix-blend-mode:normal;shape-margin:0;shape-padding:0;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal" />
+                <path
+                  d="m330 159-0.955 2.36-1.08 0.201-1.73-1.86-2.31 1.5 0.99 2.34-0.625 0.908-2.54-0.0899-0.574 2.69 2.36 0.955 0.201 1.08-1.86 1.74 1.5 2.31 2.34-0.992 0.908 0.625-0.0879 2.54 2.69 0.574 0.957-2.36 1.08-0.199 1.73 1.86 2.31-1.5-6e-3 -0.0137-0.984-2.32 0.625-0.908 2.54 0.0879 0.574-2.69-2.36-0.955-0.199-1.08 1.86-1.74-1.5-2.31-2.34 0.99-0.906-0.623 0.0879-2.54zm0.0195 0.0371 2.64 0.564-0.0879 2.54 0.936 0.645 2.33-0.988 1.47 2.26-1.85 1.73 0.207 1.12 2.35 0.951-0.562 2.64-2.53-0.0879-0.645 0.938 0.986 2.33-2.26 1.46-1.73-1.85-1.12 0.207-0.953 2.35-2.64-0.564 0.0898-2.54-0.938-0.643-2.33 0.986-1.47-2.26 1.85-1.73-0.205-1.12-2.35-0.953 0.564-2.64 2.53 0.0898 0.645-0.938-0.986-2.33 2.26-1.47 1.73 1.85 1.12-0.207zm-1.02 4.97c-0.446 0.0786-0.883 0.246-1.29 0.508-1.61 1.05-2.07 3.21-1.03 4.82 1.05 1.61 3.21 2.07 4.82 1.03 1.61-1.05 2.07-3.21 1.03-4.82-0.786-1.21-2.2-1.77-3.54-1.54zm6e-3 0.0312c1.33-0.234 2.72 0.324 3.5 1.52 1.04 1.6 0.58 3.74-1.02 4.78-1.6 1.04-3.74 0.58-4.78-1.02-1.04-1.6-0.58-3.74 1.02-4.78 0.4-0.259 0.834-0.426 1.28-0.504z"
+                  color="#000000" color-rendering="auto" dominant-baseline="auto" image-rendering="auto"
+                  solid-color="#000000" stop-color="#000000"
+                  style="font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;inline-size:0;isolation:auto;mix-blend-mode:normal;shape-margin:0;shape-padding:0;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal" />
+              </g>
+              <path transform="matrix(.178 0 0 .178 2.65 11.2)" d="m72.4 44.3h29.5" fill="none"
+                filter="url(#filter2746-8-46-5-0-3-3-5-0-3-0-6-4-5)" stroke="#1c5bea" stroke-width="2.7"
+                style="mix-blend-mode:normal" />
+              <g fill="#0165fa">
+                <g>
+                  <path
+                    d="m19.9 12.9a0.24 0.24 0 0 0-0.24 0.24 0.24 0.24 0 0 0 0.24 0.24c1.1-8.9e-5 2.02 0.808 2.1 2.21a0.24 0.24 0 0 0 0.252 0.225 0.24 0.24 0 0 0 0.227-0.252c-0.0912-1.61-1.23-2.66-2.58-2.66z"
+                    color="#000000" color-rendering="auto" dominant-baseline="auto" image-rendering="auto"
+                    shape-rendering="auto" solid-color="#000000" stop-color="#000000"
+                    style="font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;font-variation-settings:normal;inline-size:0;isolation:auto;mix-blend-mode:normal;shape-margin:0;shape-padding:0;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal" />
+                  <path
+                    d="m18.4 17.9 0.232 0.158-0.0038 0.124-0.241 0.144 0.107 0.282 0.276-0.0522 0.0849 0.0903-0.0691 0.273 0.275 0.124 0.158-0.232 0.124 0.0038 0.144 0.242 0.282-0.107-0.0525-0.277 0.0903-0.085 0.272 0.0691 0.124-0.275-0.232-0.158 0.0038-0.124 0.241-0.144-0.107-0.282-0.276 0.0522-0.0849-0.0903 0.0691-0.273-0.275-0.124-0.158 0.232-0.124-0.0038-0.144-0.242-0.282 0.107 0.0525 0.277-0.0903 0.085-0.272-0.069zm0.551 0.0829c0.0874-0.193 0.315-0.279 0.508-0.192 0.193 0.0874 0.279 0.315 0.192 0.508-0.0874 0.193-0.315 0.279-0.508 0.192-0.193-0.0874-0.279-0.315-0.192-0.508" />
+                  <path
+                    d="m23 16.6 0.279 0.033 0.0539 0.112-0.148 0.239 0.225 0.201 0.221-0.174 0.117 0.0409 0.0647 0.274 0.301-0.017 0.0331-0.279 0.112-0.0539 0.239 0.148 0.201-0.225-0.174-0.221 0.0408-0.117 0.274-0.0646-0.017-0.301-0.279-0.033-0.0539-0.112 0.148-0.239-0.225-0.201-0.221 0.174-0.117-0.0409-0.0647-0.274-0.301 0.017-0.0331 0.279-0.112 0.0539-0.239-0.148-0.201 0.225 0.174 0.221-0.0408 0.117-0.274 0.0646zm0.527-0.181c-0.0118-0.212 0.15-0.393 0.362-0.405 0.212-0.0118 0.393 0.15 0.405 0.362 0.0118 0.212-0.15 0.393-0.362 0.405-0.212 0.0118-0.393-0.15-0.405-0.362" />
+                  <path
+                    d="m17.5 11.8c-1.93-2.54e-4 -3.47 1.68-3.59 3.78-0.106-0.018-0.211-0.043-0.318-0.043-1.13-4.1e-5 -2.03 0.988-2.03 2.19 5e-5 1.12 1.18 2.07 2.21 2.18 0.0988 0.0152-0.27-0.0669-0.0098 0 0.0032-2.92e-4 0.0065 3.08e-4 0.0098 0h2e-3l0.0078-2e-3 -0.0361-0.458-0.0244-0.0183h-2e-3c-0.0219 2e-3 0.0486 0.0174 0.0264 0.0183-0.846 3e-5 -1.71-0.759-1.71-1.72 1.57e-4 -0.959 0.704-1.71 1.55-1.71 0.127-1e-4 0.254 0.017 0.377 0.0508l0.379 0.104 0.0039-0.395c0.019-1.96 1.44-3.5 3.14-3.5h2e-3c0.559 4.68e-4 1.11 0.171 1.59 0.49 0.111 0.0727 0.259 0.0421 0.332-0.0684 0.0727-0.111 0.0421-0.259-0.0684-0.332-0.545-0.361-1.17-0.548-1.81-0.557-0.0138-1.79e-4 -0.0252-0.0117-0.0391-0.0117z"
+                    color="#000000" color-rendering="auto" dominant-baseline="auto" image-rendering="auto"
+                    shape-rendering="auto" solid-color="#000000" stop-color="#000000"
+                    style="font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;font-variation-settings:normal;inline-size:0;isolation:auto;mix-blend-mode:normal;shape-margin:0;shape-padding:0;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal" />
+                </g>
+                <g transform="matrix(.6 0 0 .813 -15.2 -41.2)">
+                  <path
+                    d="m55.8 74.5c-0.0115 5.7e-5 -0.023 0.0018-0.0344 0.0052l-7.42 0.0023c-0.01-0.0026-0.0201-0.0039-0.0302-0.0041-0.104 2.26e-4 -0.189 0.127-0.189 0.283 1.28e-4 0.156 0.189 0.282 0.189 0.282 0.0079-2.5e-5 -0.0079 0.0015 0 0l7.48 0.0035c0.0032 3.22e-4 0.0063 5.16e-4 0.0095 5.84e-4 0.0044 4.5e-5 0.0087-1.5e-4 0.013-5.84e-4h0.0379v-0.0105c0.079-0.0353 0.133-0.148 0.133-0.275-1.02e-4 -0.136-0.0621-0.254-0.148-0.28v-5.81e-4h-0.0018c-0.0113-0.0034-0.0228-0.0051-0.0344-0.0052z"
+                    fill="#0165fa" />
+                </g>
+              </g>
+            </g>
+          </svg>
+          ENGENIOUS
+        </a>
+      </div>
+      <div class="block lg:hidden pr-4">
+        <button id="nav-toggle"
+          class="flex items-center p-1 text-black hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+          <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <title>Menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+          </svg>
+        </button>
+      </div>
+      <div
+        class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent brand_color p-4 lg:p-0 z-20"
+        id="nav-content">
+        <ul class="list-reset lg:flex justify-end flex-1 items-center my-6 sm:my-0">
+          <li class="mr-3">
+            <a class="inline-block hover:brand_secondarycolor py-2 px-4 font-bold no-underline" href="#header">Accueil</a>
+          </li>
+          <li class="mr-3">
+            <a class="inline-block no-underline hover:brand_secondarycolor hover:text-underline py-2 px-4"
+              href="#weare">Qui sommes-nous ?</a>
+          </li>
+          <li class="mr-3">
+            <a class="inline-block no-underline hover:brand_secondarycolor hover:text-underline py-2 px-4"
+              href="#moreinfos">Notre offre</a>
+          </li>
+        </ul>
+        <span id="navAction" href="#contact" class="relative inline-flex">
+          <a href="#contact" class="mx-auto lg:mx-0 bg-white brand_secondarycolor rounded-lg py-3 px-8 ring-1 ring-blue-100 shadow focus:outline-none focus:shadow-outline transform transition hover:brand_secondarycolor hover:scale-105 duration-300 ease-in-out">
+            <span>Nous contacter</span>
+            <span class="flex absolute h-3 w-3 top-0 right-0">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full brand_secondarybg opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-3 w-3 brand_secondarybg"></span>
+            </span>
+          </a>
+        </span>
+      </div>
+    </div>
+    <hr class="border-b border-gray-200 opacity-25 my-0 py-0" />
+  </nav>
+  <!--Hero-->
+  <div id="intro" class="pt-24 sm:pt-16">
+    <div class="container px-12 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+      <!--Left Col-->
+      <div class="flex flex-col w-full md:w-2/5 justify-center items-center md:items-start text-center md:text-left">
+        <p class="uppercase tracking-loose w-full">Spécialiste en stratégie du SI</p>
+        <h1 class="my-4 text-4xl font-bold leading-tight">
+          Donnez-vous les moyens de vos ambitions
+        </h1>
+        <p class="leading-normal text-2xl mb-8 md:text-left">
+          Parce qu'avec nous, l'échec n'est pas une option.
+        </p>
+        <a href="#moreinfos"
+          class="mx-auto lg:mx-0 brand_color hover:brand_secondarycolor bg-white text-gray-800 font-bold rounded-lg my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+          En savoir plus
+        </a>
+      </div>
+      <!--Right Col-->
+      <div class="w-full md:w-3/5 my-6 text-center">
+        <img class="w-full md:w-4/5 z-50 float-right" src="hero.png">
+      </div>
+    </div>
+  </div>
+  <div class="relative -mt-12 lg:-mt-24">
+    <svg viewBox="0 0 1428 174" version="1.1" xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-2.000000, 44.000000)" fill="#FFFFFF" fill-rule="nonzero">
+          <path
+            d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496"
+            opacity="0.100000001"></path>
+          <path
+            d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
+            opacity="0.100000001"></path>
+          <path
+            d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z"
+            id="Path-4" opacity="0.200000003"></path>
+        </g>
+        <g transform="translate(-4.000000, 76.000000)" fill="#FFFFFF" fill-rule="nonzero">
+          <path
+            d="M0.457,34.035 C57.086,53.198 98.208,65.809 123.822,71.865 C181.454,85.495 234.295,90.29 272.033,93.459 C311.355,96.759 396.635,95.801 461.025,91.663 C486.76,90.01 518.727,86.372 556.926,80.752 C595.747,74.596 622.372,70.008 636.799,66.991 C663.913,61.324 712.501,49.503 727.605,46.128 C780.47,34.317 818.839,22.532 856.324,15.904 C922.689,4.169 955.676,2.522 1011.185,0.432 C1060.705,1.477 1097.39,3.129 1121.236,5.387 C1161.703,9.219 1208.621,17.821 1235.4,22.304 C1285.855,30.748 1354.351,47.432 1440.886,72.354 L1441.191,104.352 L1.121,104.031 L0.457,34.035 Z">
+          </path>
+        </g>
+      </g>
+    </svg>
+  </div>
+  <section id="weare" class="bg-white border-b py-8">
+    <div class="container mx-auto flex flex-wrap pt-4 pb-12">
+      <h1 class="w-full my-2 text-4xl font-bold leading-tight text-center text-gray-800">
+        Qui sommes-nous ?
+      </h1>
+      <div class="w-full mb-4">
+        <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+      </div>
+      <div class="w-full md:w-3/3 p-6 flex flex-col flex-grow flex-shrink items-center text-center">
+        <h2 class="w-full text-xl text-gray-900 px-6 py-4">
+          Engenious est une entreprise de conseil en stratégie du SI.
+        </h2>
+        <p class="text-gray-800 text-base px-6 mb-5">
+          Après plusieurs années d’expériences dans le management de projets innovants
+          pour des PME et des grands-comptes, Nicolas Gautier fonde Engenious.
+          <br>
+          Engenious est né du constat suivant : les entreprises manquent
+          d’accompagnement technique pour mener à bien leurs projets.
+        </p>
+
+      </div>
+
+      <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+        <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+          <div class="flex flex-wrap py-12">
+            <p class="w-full text-gray-600 text-xs md:text-sm px-6">
+              ADAPTATION
+            </p>
+            <div class="w-full font-bold text-xl text-gray-800 px-6 py-2">
+              De la TPE/PME à la start-up
+            </div>
+            <p class="text-gray-800 text-base px-6 mb-5">
+              On part toujours de votre ambition et de votre besoin. C'est totalement flexible.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+        <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+          <div class="flex flex-wrap py-12">
+            <p class="w-full text-gray-600 text-xs md:text-sm px-6">
+              INNOVATION
+            </p>
+            <div class="w-full font-bold text-xl text-gray-800 px-6 py-2">
+              L'innovation au coeur du réacteur
+            </div>
+            <p class="text-gray-800 text-base px-6 mb-5">
+              Grâce à plusieurs années d’expériences dans le management et la
+              réalisation de projets innovants, on sait comment mener à bien vos projets !
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+        <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+          <div class="flex flex-wrap py-12">
+            <p class="w-full text-gray-600 text-xs md:text-sm px-6">
+              PRAGMATISME
+            </p>
+            <div class="w-full font-bold text-xl text-gray-800 px-6 py-2">
+              Le temps c'est de l'argent
+            </div>
+            <p class="text-gray-800 text-base px-6 mb-5">
+              On accélère votre « Go-To-Market » avec des solutions simples,
+              ingénieuses et évolutives dans le temps.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Change the colour #f8fafc to match the previous section colour -->
+  <svg class="wave-top" viewBox="0 0 1439 147" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+      <g transform="translate(-1.000000, -14.000000)" fill-rule="nonzero">
+        <g class="wave" fill="#f8fafc">
+          <path
+            d="M1440,84 C1383.555,64.3 1342.555,51.3 1317,45 C1259.5,30.824 1206.707,25.526 1169,22 C1129.711,18.326 1044.426,18.475 980,22 C954.25,23.409 922.25,26.742 884,32 C845.122,37.787 818.455,42.121 804,45 C776.833,50.41 728.136,61.77 713,65 C660.023,76.309 621.544,87.729 584,94 C517.525,105.104 484.525,106.438 429,108 C379.49,106.484 342.823,104.484 319,102 C278.571,97.783 231.737,88.736 205,84 C154.629,75.076 86.296,57.743 0,32 L0,0 L1440,0 L1440,84 Z">
+          </path>
+        </g>
+        <g transform="translate(1.000000, 15.000000)" fill="#FFFFFF">
+          <g transform="translate(719.500000, 68.500000) rotate(-180.000000) translate(-719.500000, -68.500000) ">
+            <path
+              d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496"
+              opacity="0.100000001"></path>
+            <path
+              d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
+              opacity="0.100000001"></path>
+            <path
+              d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z"
+              opacity="0.200000003"></path>
+          </g>
+        </g>
+      </g>
+    </g>
+  </svg>
+  <section id="contact" class="container mx-auto text-center py-6 mb-12">
+    <h1 class="w-full my-2 text-3xl font-bold leading-tight text-center text-white">
+      Une idée, un projet ?
+    </h1>
+    <div class="w-full mb-4">
+      <div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
+    </div>
+    <h3 class="my-4 text-2xl leading-tight pb-6">
+      Discutons-en ensemble !
+    </h3>
+    <a href="mailto://contact@engenious.fr"
+      class="mx-auto lg:mx-0 brand_color bg-white font-bold rounded-lg my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline hover:brand_secondarycolor transform transition hover:scale-105 duration-300 ease-in-out">
+      Par e-mail
+    </a>
+  </section>
+  <!--Footer-->
+  <footer class="bg-white">
+    <div class="container mx-auto px-8">
+      <div class="w-full flex flex-col md:flex-row py-6">
+        <div class="flex-1 mb-6 text-black">
+          <a class="toggleBrand text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl brand_color"
+            href="#intro">
+            <svg class="h-8 fill-current inline" version="1.1" viewBox="0 0 14.8 9.16"
+              xmlns="http://www.w3.org/2000/svg">
+              <g transform="translate(-10.7 -11.3)">
+                <g transform="matrix(.17 0 0 .17 -33.9 -9.8)" fill="#f07c52" shape-rendering="auto">
+                  <path
+                    d="m336 173-0.988-2.33 0.634-0.922 2.53 0.0888 0.569-2.67-2.35-0.954-0.203-1.1 1.86-1.73-1.48-2.29-2.34 0.99-0.922-0.634 0.0886-2.54-2.66-0.57-0.954 2.36-1.1 0.204-1.73-1.86-2.29 1.48 0.988 2.33-0.634 0.922-2.53-0.0892-0.569 2.67 2.35 0.954 0.203 1.1-1.86 1.73 1.48 2.29 2.34-0.99 0.922 0.634-0.0887 2.54 2.66 0.57 0.954-2.36 1.1-0.204 1.73 1.86zm-3.78-3.32c-1.61 1.04-3.76 0.582-4.8-1.02-1.04-1.61-0.582-3.76 1.02-4.8 1.61-1.04 3.76-0.582 4.8 1.02 1.04 1.61 0.582 3.76-1.02 4.8"
+                    color="#000000" color-rendering="auto" dominant-baseline="auto" image-rendering="auto"
+                    solid-color="#000000" stop-color="#000000"
+                    style="font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;inline-size:0;isolation:auto;mix-blend-mode:normal;shape-margin:0;shape-padding:0;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal" />
+                  <path
+                    d="m330 159-0.955 2.36-1.08 0.201-1.73-1.86-2.31 1.5 0.99 2.34-0.625 0.908-2.54-0.0899-0.574 2.69 2.36 0.955 0.201 1.08-1.86 1.74 1.5 2.31 2.34-0.992 0.908 0.625-0.0879 2.54 2.69 0.574 0.957-2.36 1.08-0.199 1.73 1.86 2.31-1.5-6e-3 -0.0137-0.984-2.32 0.625-0.908 2.54 0.0879 0.574-2.69-2.36-0.955-0.199-1.08 1.86-1.74-1.5-2.31-2.34 0.99-0.906-0.623 0.0879-2.54zm0.0195 0.0371 2.64 0.564-0.0879 2.54 0.936 0.645 2.33-0.988 1.47 2.26-1.85 1.73 0.207 1.12 2.35 0.951-0.562 2.64-2.53-0.0879-0.645 0.938 0.986 2.33-2.26 1.46-1.73-1.85-1.12 0.207-0.953 2.35-2.64-0.564 0.0898-2.54-0.938-0.643-2.33 0.986-1.47-2.26 1.85-1.73-0.205-1.12-2.35-0.953 0.564-2.64 2.53 0.0898 0.645-0.938-0.986-2.33 2.26-1.47 1.73 1.85 1.12-0.207zm-1.02 4.97c-0.446 0.0786-0.883 0.246-1.29 0.508-1.61 1.05-2.07 3.21-1.03 4.82 1.05 1.61 3.21 2.07 4.82 1.03 1.61-1.05 2.07-3.21 1.03-4.82-0.786-1.21-2.2-1.77-3.54-1.54zm6e-3 0.0312c1.33-0.234 2.72 0.324 3.5 1.52 1.04 1.6 0.58 3.74-1.02 4.78-1.6 1.04-3.74 0.58-4.78-1.02-1.04-1.6-0.58-3.74 1.02-4.78 0.4-0.259 0.834-0.426 1.28-0.504z"
+                    color="#000000" color-rendering="auto" dominant-baseline="auto" image-rendering="auto"
+                    solid-color="#000000" stop-color="#000000"
+                    style="font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;inline-size:0;isolation:auto;mix-blend-mode:normal;shape-margin:0;shape-padding:0;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal" />
+                </g>
+                <path transform="matrix(.178 0 0 .178 2.65 11.2)" d="m72.4 44.3h29.5" fill="none"
+                  filter="url(#filter2746-8-46-5-0-3-3-5-0-3-0-6-4-5)" stroke="#1c5bea" stroke-width="2.7"
+                  style="mix-blend-mode:normal" />
+                <g fill="#0165fa">
+                  <g>
+                    <path
+                      d="m19.9 12.9a0.24 0.24 0 0 0-0.24 0.24 0.24 0.24 0 0 0 0.24 0.24c1.1-8.9e-5 2.02 0.808 2.1 2.21a0.24 0.24 0 0 0 0.252 0.225 0.24 0.24 0 0 0 0.227-0.252c-0.0912-1.61-1.23-2.66-2.58-2.66z"
+                      color="#000000" color-rendering="auto" dominant-baseline="auto" image-rendering="auto"
+                      shape-rendering="auto" solid-color="#000000" stop-color="#000000"
+                      style="font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;font-variation-settings:normal;inline-size:0;isolation:auto;mix-blend-mode:normal;shape-margin:0;shape-padding:0;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal" />
+                    <path
+                      d="m18.4 17.9 0.232 0.158-0.0038 0.124-0.241 0.144 0.107 0.282 0.276-0.0522 0.0849 0.0903-0.0691 0.273 0.275 0.124 0.158-0.232 0.124 0.0038 0.144 0.242 0.282-0.107-0.0525-0.277 0.0903-0.085 0.272 0.0691 0.124-0.275-0.232-0.158 0.0038-0.124 0.241-0.144-0.107-0.282-0.276 0.0522-0.0849-0.0903 0.0691-0.273-0.275-0.124-0.158 0.232-0.124-0.0038-0.144-0.242-0.282 0.107 0.0525 0.277-0.0903 0.085-0.272-0.069zm0.551 0.0829c0.0874-0.193 0.315-0.279 0.508-0.192 0.193 0.0874 0.279 0.315 0.192 0.508-0.0874 0.193-0.315 0.279-0.508 0.192-0.193-0.0874-0.279-0.315-0.192-0.508" />
+                    <path
+                      d="m23 16.6 0.279 0.033 0.0539 0.112-0.148 0.239 0.225 0.201 0.221-0.174 0.117 0.0409 0.0647 0.274 0.301-0.017 0.0331-0.279 0.112-0.0539 0.239 0.148 0.201-0.225-0.174-0.221 0.0408-0.117 0.274-0.0646-0.017-0.301-0.279-0.033-0.0539-0.112 0.148-0.239-0.225-0.201-0.221 0.174-0.117-0.0409-0.0647-0.274-0.301 0.017-0.0331 0.279-0.112 0.0539-0.239-0.148-0.201 0.225 0.174 0.221-0.0408 0.117-0.274 0.0646zm0.527-0.181c-0.0118-0.212 0.15-0.393 0.362-0.405 0.212-0.0118 0.393 0.15 0.405 0.362 0.0118 0.212-0.15 0.393-0.362 0.405-0.212 0.0118-0.393-0.15-0.405-0.362" />
+                    <path
+                      d="m17.5 11.8c-1.93-2.54e-4 -3.47 1.68-3.59 3.78-0.106-0.018-0.211-0.043-0.318-0.043-1.13-4.1e-5 -2.03 0.988-2.03 2.19 5e-5 1.12 1.18 2.07 2.21 2.18 0.0988 0.0152-0.27-0.0669-0.0098 0 0.0032-2.92e-4 0.0065 3.08e-4 0.0098 0h2e-3l0.0078-2e-3 -0.0361-0.458-0.0244-0.0183h-2e-3c-0.0219 2e-3 0.0486 0.0174 0.0264 0.0183-0.846 3e-5 -1.71-0.759-1.71-1.72 1.57e-4 -0.959 0.704-1.71 1.55-1.71 0.127-1e-4 0.254 0.017 0.377 0.0508l0.379 0.104 0.0039-0.395c0.019-1.96 1.44-3.5 3.14-3.5h2e-3c0.559 4.68e-4 1.11 0.171 1.59 0.49 0.111 0.0727 0.259 0.0421 0.332-0.0684 0.0727-0.111 0.0421-0.259-0.0684-0.332-0.545-0.361-1.17-0.548-1.81-0.557-0.0138-1.79e-4 -0.0252-0.0117-0.0391-0.0117z"
+                      color="#000000" color-rendering="auto" dominant-baseline="auto" image-rendering="auto"
+                      shape-rendering="auto" solid-color="#000000" stop-color="#000000"
+                      style="font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;font-variation-settings:normal;inline-size:0;isolation:auto;mix-blend-mode:normal;shape-margin:0;shape-padding:0;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal" />
+                  </g>
+                  <g transform="matrix(.6 0 0 .813 -15.2 -41.2)">
+                    <path
+                      d="m55.8 74.5c-0.0115 5.7e-5 -0.023 0.0018-0.0344 0.0052l-7.42 0.0023c-0.01-0.0026-0.0201-0.0039-0.0302-0.0041-0.104 2.26e-4 -0.189 0.127-0.189 0.283 1.28e-4 0.156 0.189 0.282 0.189 0.282 0.0079-2.5e-5 -0.0079 0.0015 0 0l7.48 0.0035c0.0032 3.22e-4 0.0063 5.16e-4 0.0095 5.84e-4 0.0044 4.5e-5 0.0087-1.5e-4 0.013-5.84e-4h0.0379v-0.0105c0.079-0.0353 0.133-0.148 0.133-0.275-1.02e-4 -0.136-0.0621-0.254-0.148-0.28v-5.81e-4h-0.0018c-0.0113-0.0034-0.0228-0.0051-0.0344-0.0052z"
+                      fill="#0165fa" />
+                  </g>
+                </g>
+              </g>
+            </svg>
+            ENGENIOUS
+          </a>
+          <p class="mb-6 mt-2 block mr-2 text-sm  md:mr-0 text-gray-800">
+            ENGENIOUS est une entreprise individuelle <br>
+            crée par Nicolas GAUTIER.<br>
+            Retrouvez-nous dans les Pays de la Loire ainsi qu'en Ile de France.<br>
+          </p>
+        </div>
+        <div class="flex-1">
+          <p class="uppercase text-gray-500 md:mb-6">Contact</p>
+          <a class="mb-2 mt-2 inline-block mr-2 md:block md:mr-0 text-gray-800 text-blue-500 underline"
+            href="mailto://contact@engenious.fr">E-mail</a>
+          <a class="mb-2 mt-2 inline-block mr-2 md:block md:mr-0 text-gray-800 text-blue-500 underline"
+            href="https://linkedin.com/company/engeniouslab">LinkedIn</a>
+          <a class="mb-2 mt-2 inline-block mr-2 md:block md:mr-0 text-gray-800 text-blue-500 underline"
+            href="https://twitter.com/NikoWoot">Twitter</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    /*Toggle dropdown list*/
+    /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
+
+    var navMenuDiv = document.getElementById("nav-content");
+    var navMenu = document.getElementById("nav-toggle");
+
+    document.onclick = check;
+
+    function check(e) {
+      var target = (e && e.target) || (event && event.srcElement);
+
+      //Nav Menu
+      if (!checkParent(target, navMenuDiv)) {
+        // click NOT on the menu
+        if (checkParent(target, navMenu)) {
+          // click on the link
+          if (navMenuDiv.classList.contains("hidden")) {
+            navMenuDiv.classList.remove("hidden");
+          } else {
+            navMenuDiv.classList.add("hidden");
+          }
+        } else {
+          // click both outside link and outside menu, hide menu
+          navMenuDiv.classList.add("hidden");
+        }
+      }
+    }
+
+    function checkParent(t, elm) {
+      while (t.parentNode) {
+        if (t == elm) {
+          return true;
+        }
+        t = t.parentNode;
+      }
+      return false;
+    }
+  </script>
+</body>
+
+</html>
